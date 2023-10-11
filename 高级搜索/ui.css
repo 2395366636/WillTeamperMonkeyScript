@@ -7,3 +7,6 @@
     cursor : pointer;
     textAlign : center;
 }
+body{
+    background-color: #4caf50;
+}

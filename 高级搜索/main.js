@@ -9,21 +9,11 @@
 // @grant        none
 // ==/UserScript==
 (function () {
-    var css = "<style type=\"text/css\">" +
-        ".custom_button{\n" +
-        "    backgroundColor : #4caf50;\n" +
-        "    color : #fff;\n" +
-        "    padding : 10px 20px;\n" +
-        "    border : none;\n" +
-        "    borderRadius : 5px;\n" +
-        "    cursor : pointer;\n" +
-        "    textAlign : center;\n" +
-        "}" +
-        "</style>"
-    console.log(css)
-    var style= document.createElement("style")
-    style.innerText=css
+    var style= document.createElement("link")
+    style.rel = "stylesheet"
+    style.href="https://raw.githubusercontent.com/2395366636/WillTeamperMonkeyScript/main/%E9%AB%98%E7%BA%A7%E6%90%9C%E7%B4%A2/%E6%96%B0%E5%BB%BA%E6%96%87%E6%9C%AC%E6%96%87%E6%A1%A3.css"
     document.head.appendChild(style)
+
     'use strict';
     // 创建栏元素
     var customBar = document.createElement("div");
