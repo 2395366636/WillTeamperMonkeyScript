@@ -7,7 +7,8 @@
 // @match        https://www.baidu.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=baidu.com
 // @resource customCSS https://raw.githubusercontent.com/2395366636/WillTeamperMonkeyScript/main/%E9%AB%98%E7%BA%A7%E6%90%9C%E7%B4%A2/%E6%96%B0%E5%BB%BA%E6%96%87%E6%9C%AC%E6%96%87%E6%A1%A3.css
-// @grant        none
+// @grant        GM_addStyle
+// @grant        GM_getResourceText
 // ==/UserScript==
 (function () {
     'use strict';
