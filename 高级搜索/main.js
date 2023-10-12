@@ -1,74 +1,50 @@
-// ==UserScript==
-// @name         高级搜索
-// @namespace    http://tampermonkey.net/
-// @version      0.1
-// @description  try to take over the world!
-// @author       You
-// @match        https://www.baidu.com/*
-// @icon         https://www.google.com/s2/favicons?sz=64&domain=baidu.com
-// @resource customCSS https://raw.githubusercontent.com/2395366636/WillTeamperMonkeyScript/main/%E9%AB%98%E7%BA%A7%E6%90%9C%E7%B4%A2/%E6%96%B0%E5%BB%BA%E6%96%87%E6%9C%AC%E6%96%87%E6%A1%A3.css
-// @grant        GM_addStyle
-// @grant        GM_getResourceText
-// ==/UserScript==
+
+
 (function () {
     'use strict';
-    // 创建栏元素
+//油猴api引入外部文件
+    const css = GM_getResourceText("customCSS");
+    GM_addStyle(css);
+
+// 创建栏元素
     var customBar = document.createElement("div");
     customBar.className = "custom_bar";
 
-    var buttonContainer = document.createElement("div");
-    buttonContainer.className = "button_container";
+    var boxContainer1 = document.createElement("div");
+    boxContainer1.className = "boxContainer1";
 
     var buttons1 = ["限定网址","限定标题","限定资源类型","限定文件类型"]
     var inputs1 = ["","","",""]
     var div_list = []
 
-    // 绑定按钮和输入框
+// 绑定按钮和输入框
     for(var i=0;i<4;i++){
         var div =  document.createElement("div");
+        div.className = "item1_box"
         var button = document.createElement("button");
         button.textContent = buttons1[i];
         button.className = "custom_button";
         var input = document.createElement("input");
         input.placeholder = inputs1[i];
-        div.style.height = "50px";
-        div.style.display = "flex";
-        div.style.justifyContent = "space-between";
-        div.style.alignItems = "center";
+
         div.appendChild(button)
         div.appendChild(input)
         div_list.push(div)
     }
 
 
-    // 为栏和按钮添加样式
-    customBar.style.width = "100%";
-    customBar.style.height = "50px";
-    customBar.style.backgroundColor = "#007bff";
-    customBar.style.color = "#fff";
-    customBar.style.display = "flex";
-    customBar.style.justifyContent = "space-between";
-    customBar.style.alignItems = "center";
-    //
-    buttonContainer.style.width = "50%";
-    buttonContainer.style.height = "50px";
-    buttonContainer.style.display = "flex";
-    buttonContainer.style.justifyContent = "space-between";
-    buttonContainer.style.alignItems = "center";
-
-
-    customBar.appendChild(buttonContainer);
+    customBar.appendChild(boxContainer1);
 
     div_list.forEach(function (button) {
-        buttonContainer.appendChild(button);
+        boxContainer1.appendChild(button);
     });
 
-    // 将栏元素添加到class为"head_wrapper"的div下面
+// 将栏元素添加到class为"head_wrapper"的div下面
     var headWrapper = document.querySelector(".head_wrapper");
     headWrapper.appendChild(customBar);
 
     var search_btn = document.querySelector("#su");
-    // 添加新的点击事件处理函数
+// 添加新的点击事件处理函数
     search_btn.addEventListener("click", function () {
         alert("额外的点击事件触发");
     });
