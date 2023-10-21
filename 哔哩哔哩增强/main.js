@@ -7,12 +7,10 @@
 
 
     var bar = document.querySelector(".fav-filters")
-    const startTime = performance.now();
-    let executionTime = 0
-    while (!bar && executionTime < 5000) {
+    var cout =0
+    while (!bar && cout < 500) {
         bar = document.querySelector(".fav-filters")
-        const endTime = performance.now();
-        executionTime = endTime - startTime;
+        cout+=1
     }
     if (bar) {
         var box = document.createElement("div")
