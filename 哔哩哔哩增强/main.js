@@ -7,11 +7,7 @@
 
     setTimeout(()=>{
         var bar = document.querySelector(".fav-filters")
-        var cout =0
-        while (!bar && cout < 500) {
-            bar = document.querySelector(".fav-filters")
-            cout+=1
-        }
+
         if (bar) {
             var box = document.createElement("div")
             box.className = "filter-item do-batch"
