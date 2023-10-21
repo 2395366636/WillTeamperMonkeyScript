@@ -9,7 +9,7 @@
     var bar = document.querySelector(".fav-filters")
     const startTime = performance.now();
     let executionTime = 0
-    while (!bar || executionTime < 5000) {
+    while (!bar && executionTime < 5000) {
         bar = document.querySelector(".fav-filters")
         const endTime = performance.now();
         executionTime = endTime - startTime;
