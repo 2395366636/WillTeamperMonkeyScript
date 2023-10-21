@@ -21,7 +21,7 @@
         const firstChild = bar.firstChild;
         bar.insertBefore(box, firstChild);
     } else {
-        alert("未找到栏,添加按钮失败")
+        console.log("未找到栏,添加按钮失败")
     }
 
     button.addEventListener("click", function () {
