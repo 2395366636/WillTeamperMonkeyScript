@@ -1,5 +1,4 @@
 (function () {
-    console.log(2)
     'use strict';
     var temp = document.createElement("template");
     var elbtn = document.createElement("el-button")
