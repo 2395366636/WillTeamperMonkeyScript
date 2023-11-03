@@ -42,6 +42,7 @@ if(matchedIndex==1) {
     }
 }
 if(matchedIndex==2){
+    console.log(111)
     var block = document.querySelector(".popSc")
     if(block){
         block.style.display = "none"
