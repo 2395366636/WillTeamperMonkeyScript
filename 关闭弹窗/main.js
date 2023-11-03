@@ -41,7 +41,7 @@ if(matchedIndex==1) {
         }
     }
 }
-if(matchedIndex==-2){
+if(matchedIndex==2){
     var block = document.querySelector(".popSc")
     if(block){
         block.style.display = "none"
